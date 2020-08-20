@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load bootstrap_tags %}
+
+{% block content %}
+<h1 style="position: absolute;left: 43%;top: 25%;font-size: 50px" class="wiggle">PROFILE</h1>
+
+<p style="position: absolute;left: 33%;top: 40%;font-size:35px" class="animated-words">
+<span>YOU HAVE LOGGED IN AS : {{ user }}</span>
+</p>
+<head>
+	<style type="text/css">
+		@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+   80% { transform: rotate(0deg); }
+   85% { transform: rotate(5deg); }
+   95% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+h1.wiggle {
+  display: inline-block;
+  animation: wiggle 1.5s infinite;
+}
+
+h1.wiggle:hover {
+  animation: none;
+}
+
+.animated-words {
+	color: black;
+	
+	color: white;
+    display: inline-block;
+    font-weight: 500px;
+	font-size: 1em;
+}
+.animated-words span:nth-child(2) {
+    -webkit-animation-delay: 3s;
+    -ms-animation-delay: 3s;
+    animation-delay: 3s;
+    color: black;
+}
+.animated-words span:nth-child(3) {
+    -webkit-animation-delay: 3s;
+    -ms-animation-delay: 3s;
+    animation-delay: 3s;
+    color: black;
+}
+.animated-words span:nth-child(4) {
+    -webkit-animation-delay: 3s;
+    -ms-animation-delay: 3s;
+    animation-delay: 3s;
+    color: black;
+}
+.animated-words span:nth-child(5) {
+    -webkit-animation-delay: 3s;
+    -ms-animation-delay: 3s;
+    animation-delay: 3s;
+    color: black;
+}
+.animated-words span:nth-child(6) {
+    -webkit-animation-delay: 3s;
+    -ms-animation-delay: 3s;
+    animation-delay: 3s;
+    color: black;
+}
+.animated-words span {
+   
+    opacity: 0;
+    overflow: hidden;
+    color: black;
+    -webkit-animation: animateWord 2s linear infinite 0s;
+    -ms-animation: animateWord 2s linear infinite 0s;
+    animation: animateWord 2s linear infinite 0s;
+}
+@-webkit-keyframes animateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); }
+    5% { opacity: 1; -webkit-transform: translateY(-0px);}
+    17% { opacity: 1; -webkit-transform: translateY(-0px); }
+    20% { opacity: 0; -webkit-transform: translateY(30px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+}
+
+	</style>
+</head>
+{% endblock content%}

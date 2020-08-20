@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+{% if user.is_authenticated %}
+<h1> <a href="{% url 'list'  %}">CLICK TO SEE THE EVENTS LIST</a></h1>
+{% else %}
+<h1 style="position: absolute;left: 25%;top:50%;font-size: 50px" class="wiggle">PLEASE LOGIN OR REGISTER!!!</h1>
+<head>
+	<style type="text/css">
+		@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+   80% { transform: rotate(0deg); }
+   85% { transform: rotate(5deg); }
+   95% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+h1.wiggle {
+  display: inline-block;
+  animation: wiggle 1s infinite;
+}
+
+h1.wiggle:hover {
+  animation: none;
+}
+	</style>
+</head>
+
+{% endif %}
+
+
+
+{% endblock content%}

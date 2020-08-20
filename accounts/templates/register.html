@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load bootstrap_tags %}
+
+{% block content %}
+<h3 style="color:black">REGISTER</h3>
+
+<form method='POST'>
+    {% csrf_token %}
+    
+    {{ form | as_bootstrap }}
+    <button class="btn btn-warning btn-sm" type="button" style="width: 8%;">
+    	REGISTER
+    </button>
+    
+</form>
+{% endblock content%}
+<!-- #2D4331 -->
